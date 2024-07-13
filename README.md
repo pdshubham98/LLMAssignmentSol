@@ -36,7 +36,7 @@ As a Data Engineer, it’s also important to understand analytical needs downstr
 Here's a complete solution for tracking the growth and activity of public GitHub repositories containing the LLM and RAG topics. The solution is divided into three Python files:
 
 elt_repository.py: Extract and load repository metadata.
-elt_issues_prs.py: Extract and load issues and PR information.
+elt_issues_prs.py: Extract and load issues and PR information(**).
 etl_analytics.py: Perform analytics and generate visualizations.
 
 
@@ -50,7 +50,43 @@ Run the scripts:
 
 Run elt_repository.py to extract and load repository metadata.
 Run elt_issues_prs.py to extract and load issues and PR information.
+
+
+
+
 Run etl_analytics.py to perform analytics and generate visualizations.
 
 
 
+
+
+
+Top 5 Repositories by Stars:
+                           full_name  stargazers_count
+0                    langgenius/dify             37411
+1                      QuivrHQ/quivr             34164
+2              run-llama/llama_index             33517
+3              open-webui/open-webui             31077
+4  chatchat-space/Langchain-Chatchat             29811
+
+Top 5 Repositories by PRs:
+               full_name  pr_count
+0  run-llama/llama_index      5248
+1    deepset-ai/haystack      3830
+2        langgenius/dify      2946
+3  postgresml/postgresml      1306
+4       Agenta-AI/agenta      1263
+
+Top 5 Repositories by Issues:
+                           full_name  issue_count
+0              run-llama/llama_index         4468
+1  chatchat-space/Langchain-Chatchat         3528
+2                deepset-ai/haystack         3346
+3                    langgenius/dify         2716
+4         zhayujie/chatgpt-on-wechat         1664
+
+
+
+
+
+** Not able to fetch the issues_and_prs for all the repository due to resource(cluster configuration) problem  
