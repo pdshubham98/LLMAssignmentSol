@@ -66,7 +66,7 @@ def incremental_update():
     conn.close()
 
     # Batch process repositories
-    batch_size = 10  # Adjust batch size as per your requirements
+    batch_size = 100  # Adjust batch size as per your requirements
     for i in range(0, len(repos), batch_size):
         batch_repos = repos[i:i + batch_size]
         for repo in batch_repos:
